@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:padding="@dimen/activity_horizontal_margin" tools:context=".GameActivity"
+    android:focusableInTouchMode="true" android:id="@+id/layout"
     android:background="@android:color/holo_blue_dark">
 
-    <RelativeLayout
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:id="@+id/top" >
+    <ImageView
+        android:layout_width="?android:attr/listPreferredItemHeight"
+        android:layout_height="?android:attr/listPreferredItemHeight"
+        android:id="@+id/back"
+        android:src="@drawable/back"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-        <ImageView
-            android:layout_width="?android:attr/listPreferredItemHeight"
-            android:layout_height="?android:attr/listPreferredItemHeight"
-            android:id="@+id/back"
-            android:src="@drawable/back"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <ImageView
-            android:layout_width="?android:attr/listPreferredItemHeight"
-            android:layout_height="?android:attr/listPreferredItemHeight"
-            android:id="@+id/reset"
-            android:src="@drawable/reset"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-    </RelativeLayout>
+    <ImageView
+        android:layout_width="?android:attr/listPreferredItemHeight"
+        android:layout_height="?android:attr/listPreferredItemHeight"
+        android:id="@+id/reset"
+        android:src="@drawable/reset"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <RelativeLayout
         android:layout_width="match_parent" android:layout_height="match_parent"
-        android:layout_below="@+id/top" android:layout_alignParentBottom="true" >
+        android:layout_toRightOf="@+id/back" android:layout_toEndOf="@+id/back"
+        android:layout_toLeftOf="@+id/reset" android:layout_toStartOf="@+id/reset">
 
         <Space
             android:layout_width="0dip"
@@ -51,70 +51,88 @@
                 android:text="Button"
                 android:background="@drawable/gamebutton"
                 android:onClick="clicked"
+                android:id="@+id/leftButton0" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Button"
+                android:background="@drawable/gamebutton"
+                android:onClick="clicked"
                 android:id="@+id/leftButton1" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" android:background="@drawable/gamebutton"
+                android:text="Button"
+                android:background="@drawable/gamebutton"
+                android:onClick="clicked"
                 android:id="@+id/leftButton2" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" android:background="@drawable/gamebutton"
+                android:text="Button"
+                android:background="@drawable/gamebutton"
+                android:onClick="clicked"
                 android:id="@+id/leftButton3" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" android:background="@drawable/gamebutton"
+                android:text="Button"
+                android:background="@drawable/gamebutton"
+                android:onClick="clicked"
                 android:id="@+id/leftButton4" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" android:background="@drawable/gamebutton"
+                android:text="Button"
+                android:background="@drawable/gamebutton"
+                android:onClick="clicked"
                 android:id="@+id/leftButton5" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" android:background="@drawable/gamebutton"
+                android:text="Button"
+                android:background="@drawable/gamebutton"
+                android:onClick="clicked"
                 android:id="@+id/leftButton6" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" android:background="@drawable/gamebutton"
+                android:text="Button"
+                android:background="@drawable/gamebutton"
+                android:onClick="clicked"
                 android:id="@+id/leftButton7" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" android:background="@drawable/gamebutton"
+                android:text="Button"
+                android:background="@drawable/gamebutton"
+                android:onClick="clicked"
                 android:id="@+id/leftButton8" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" android:background="@drawable/gamebutton"
+                android:text="Button"
+                android:background="@drawable/gamebutton"
+                android:onClick="clicked"
                 android:id="@+id/leftButton9" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Button" android:background="@drawable/gamebutton"
-                android:id="@+id/leftButton10" />
 
         </LinearLayout>
 
@@ -128,74 +146,94 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" android:background="@drawable/gamebutton"
+                android:text="Button"
+                android:background="@drawable/gamebutton"
+                android:onClick="clicked"
+                android:id="@+id/rightButton0" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Button"
+                android:background="@drawable/gamebutton"
+                android:onClick="clicked"
                 android:id="@+id/rightButton1" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" android:background="@drawable/gamebutton"
+                android:text="Button"
+                android:background="@drawable/gamebutton"
+                android:onClick="clicked"
                 android:id="@+id/rightButton2" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" android:background="@drawable/gamebutton"
+                android:text="Button"
+                android:background="@drawable/gamebutton"
+                android:onClick="clicked"
                 android:id="@+id/rightButton3" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" android:background="@drawable/gamebutton"
+                android:text="Button"
+                android:background="@drawable/gamebutton"
+                android:onClick="clicked"
                 android:id="@+id/rightButton4" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" android:background="@drawable/gamebutton"
+                android:text="Button"
+                android:background="@drawable/gamebutton"
+                android:onClick="clicked"
                 android:id="@+id/rightButton5" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" android:background="@drawable/gamebutton"
+                android:text="Button"
+                android:background="@drawable/gamebutton"
+                android:onClick="clicked"
                 android:id="@+id/rightButton6" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" android:background="@drawable/gamebutton"
+                android:text="Button"
+                android:background="@drawable/gamebutton"
+                android:onClick="clicked"
                 android:id="@+id/rightButton7" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" android:background="@drawable/gamebutton"
+                android:text="Button"
+                android:background="@drawable/gamebutton"
+                android:onClick="clicked"
                 android:id="@+id/rightButton8" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Button" android:background="@drawable/gamebutton"
+                android:text="Button"
+                android:background="@drawable/gamebutton"
+                android:onClick="clicked"
                 android:id="@+id/rightButton9" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Button" android:background="@drawable/gamebutton"
-                android:id="@+id/rightButton10" />
 
         </LinearLayout>
 
     </RelativeLayout>
 
-</LinearLayout>
+</RelativeLayout>
